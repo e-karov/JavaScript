@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click here!</button>
+
+
+    <ul>
+        <li><strong>first</strong></li>
+        <li>second</li>
+        <li>third</li>
+        <li>forth</li>
+        <li>fifth</li>
+    </ul>
+    <script>
+        let list = document.getElementsByTagName("ul")[0];
+        list.addEventListener("click", handler);
+
+        function handler(e){
+            console.log(`You have clicked ${e.target.textContent} list item. `)
+        }
+
+        let btn = document.getElementsByTagName("button")[0];
+        btn.onclick = clickHandler;
+        function clickHandler(e){
+            window.setTimeout(window.alert, 2*1000, e.target.textContent)
+        }
+    </script>
+</body>
+</html>
